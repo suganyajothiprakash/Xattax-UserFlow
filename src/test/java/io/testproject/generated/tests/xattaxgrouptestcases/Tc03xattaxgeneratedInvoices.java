@@ -85,7 +85,7 @@ public class Tc03xattaxgeneratedInvoices implements Test, ExceptionsReporter {
     //    Click on E-Invoice Queue in Menu Bar
     // set step-specific timeout (will undo this at the end)
     driver.manage().timeouts().implicitlyWait(35000, TimeUnit.MILLISECONDS);
-    GeneratedUtils.sleep(2000);
+    GeneratedUtils.sleep(8000);
     by = By.xpath("//span[. = 'e-Invoice Queue']");
     driver.findElement(by).click();
     driver.manage().timeouts().implicitlyWait(15000, TimeUnit.MILLISECONDS);
@@ -214,27 +214,29 @@ public class Tc03xattaxgeneratedInvoices implements Test, ExceptionsReporter {
 
     // 22. Click 'Mail sent successfully.' if it's visible
     //    Click on POP UP Message 
-    GeneratedUtils.sleep(1000);
+    GeneratedUtils.sleep(8000);
     clickIfVisibleWeb = VisibleElementsOperations.clickIfVisibleWeb("");
     by = By.xpath("//div[. = 'Mail sent successfully. ']");
     clickIfVisibleWeb = (VisibleElementsOperations.ClickIfVisibleWeb)((ReportingDriver)driver).addons().execute(clickIfVisibleWeb, by, -1);
 
     // 23. Get text from 'Mail sent successfully.' if it's visible
     //    Get the Text from pop up Message 
-    GeneratedUtils.sleep(1000);
+    GeneratedUtils.sleep(10000);
     getTextIfVisibleWeb = VisibleElementsOperations.getTextIfVisibleWeb("");
     by = By.xpath("//div[. = 'Mail sent successfully. ']");
     getTextIfVisibleWeb = (VisibleElementsOperations.GetTextIfVisibleWeb)((ReportingDriver)driver).addons().execute(getTextIfVisibleWeb, by, -1);
 
     // 24. Click 'Close'
     //    Click on Close Button to close the send mail window
-    GeneratedUtils.sleep(1000);
-    by = By.xpath("//button[. = '\n										 Close\n									']");
+    GeneratedUtils.sleep(4000);
+    //by = By.xpath("//button[. = '\n										 Close\n									']");
+    //by = By.xpath("//*[starts-with(@class,\"btn btn-red\")]");
+    by = By.xpath("//*[@id=\"sendMail\"]/div[2]/div/div[2]/form/div[3]/div[3]/button[2]");
     driver.findElement(by).click();
 
     // 25. Click 'e-Invoice Download'
     //    Click on E-Invoice Download Button
-    GeneratedUtils.sleep(1000);
+    GeneratedUtils.sleep(5000);
     by = By.xpath("//button[. = '\n						 e-Invoice\n						Download\n					']");
     driver.findElement(by).click();
 

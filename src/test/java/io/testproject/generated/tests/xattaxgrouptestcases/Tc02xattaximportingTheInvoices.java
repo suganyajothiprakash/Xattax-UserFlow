@@ -114,13 +114,13 @@ public class Tc02xattaximportingTheInvoices implements Test, ExceptionsReporter 
 
     // 8. Click 'INPUT'
     //    Click on Search Field
-    GeneratedUtils.sleep(500);
+    GeneratedUtils.sleep(1000);
     by = By.xpath("//label/input");
     driver.findElement(by).click();
 
     // 9. Type '{{ImportSearchInvoice}}' in 'INPUT'
     //    Enter the Value in Import E-Invoice Search Field
-    GeneratedUtils.sleep(500);
+    GeneratedUtils.sleep(1000);
     by = By.xpath("//label/input");
     driver.findElement(by).sendKeys(ImportSearchInvoice);
 

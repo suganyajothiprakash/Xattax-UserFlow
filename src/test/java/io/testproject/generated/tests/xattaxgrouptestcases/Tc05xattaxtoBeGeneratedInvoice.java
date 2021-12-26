@@ -166,27 +166,27 @@ public class Tc05xattaxtoBeGeneratedInvoice implements Test, ExceptionsReporter 
     // 6. Click 'Generate IRN' if it's visible
     //    Click on Generate IRN Button
     GeneratedUtils.sleep(500);
-    clickIfVisibleWeb = VisibleElementsOperations.clickIfVisibleWeb("");
-    by = By.cssSelector("#generate");
-    clickIfVisibleWeb = (VisibleElementsOperations.ClickIfVisibleWeb)((ReportingDriver)driver).addons().execute(clickIfVisibleWeb, by, -1);
+    //clickIfVisibleWeb = VisibleElementsOperations.clickIfVisibleWeb("");
+    //by = By.cssSelector("#generate");
+    //clickIfVisibleWeb = (VisibleElementsOperations.ClickIfVisibleWeb)((ReportingDriver)driver).addons().execute(clickIfVisibleWeb, by, -1);
 
     // 7. Click '2278 - IRN is already generated and i...' if it's visible
     //    Click on Text Message
     GeneratedUtils.sleep(500);
-    clickIfVisibleWeb = VisibleElementsOperations.clickIfVisibleWeb("");
-    by = By.xpath("//div[. = ' 2278 - IRN is already generated and is cancelled for this Document number. The duplicate IRN cannot be generated for the same  number.  ']");
-    clickIfVisibleWeb = (VisibleElementsOperations.ClickIfVisibleWeb)((ReportingDriver)driver).addons().execute(clickIfVisibleWeb, by, -1);
+    //clickIfVisibleWeb = VisibleElementsOperations.clickIfVisibleWeb("");
+    //by = By.xpath("//div[. = ' 2278 - IRN is already generated and is cancelled for this Document number. The duplicate IRN cannot be generated for the same  number.  ']");
+    //clickIfVisibleWeb = (VisibleElementsOperations.ClickIfVisibleWeb)((ReportingDriver)driver).addons().execute(clickIfVisibleWeb, by, -1);
 
     // 8. Get text from '2278 - IRN is already generated and i...' if it's visible
     //    Get the Text from Pop Up Message
     GeneratedUtils.sleep(500);
-    getTextIfVisibleWeb = VisibleElementsOperations.getTextIfVisibleWeb("");
-    by = By.xpath("//div[. = ' 2278 - IRN is already generated and is cancelled for this Document number. The duplicate IRN cannot be generated for the same  number.  ']");
-    getTextIfVisibleWeb = (VisibleElementsOperations.GetTextIfVisibleWeb)((ReportingDriver)driver).addons().execute(getTextIfVisibleWeb, by, -1);
+    //getTextIfVisibleWeb = VisibleElementsOperations.getTextIfVisibleWeb("");
+    //by = By.xpath("//div[. = ' 2278 - IRN is already generated and is cancelled for this Document number. The duplicate IRN cannot be generated for the same  number.  ']");
+    //getTextIfVisibleWeb = (VisibleElementsOperations.GetTextIfVisibleWeb)((ReportingDriver)driver).addons().execute(getTextIfVisibleWeb, by, -1);
 
     // 9. Click 'Back To Queue'
     //    Click on Back to Queue
-    GeneratedUtils.sleep(500);
+    GeneratedUtils.sleep(2000);
     //by = By.xpath("//a[. = ' Back To Queue ']");
     by = By.xpath("//*[starts-with(@class,\"fa fa-arrow-left\")]");
     driver.findElement(by).click();
