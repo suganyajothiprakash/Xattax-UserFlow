@@ -189,13 +189,13 @@ public class Tc07xattaxcancelledEinvoice implements Test, ExceptionsReporter {
 
     // 8. Click 'Edit2'
     //    Click on Edit Button
-    GeneratedUtils.sleep(500);
+    GeneratedUtils.sleep(1500);
     by = By.xpath("//tr[1]/td[10]/button");
     driver.findElement(by).click();
 
     // 9. Click 'Cancel e-Invoice'
     //    Click on cancel Button
-    GeneratedUtils.sleep(500);
+    GeneratedUtils.sleep(1000);
     by = By.cssSelector("#cancelButton");
     driver.findElement(by).click();
 
